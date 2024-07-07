@@ -4,15 +4,15 @@
 #include <iostream>
 #include <unordered_map>
 
-// ©Р╪э╤ах║еДжцнд╪ЧюЮ
+// О©╫О©╫э╤О©╫х║О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫
 class MprpcConfig
 {
 public:
-    // ╦╨тП╫БнЖ╪стьеДжцнд╪Ч
+    // О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫
     void LoadConfigFile(const char* config_file);
-    // ╡Ия╞еДжцоНпео╒
+    // О©╫О©╫я╞О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒
     std::string Load(const std::string& key);
-    // х╔╣Твж╥Ш╢╝г╟╨С╣д©у╦Я
+    // х╔О©╫О©╫О©╫ж╥О©╫О©╫О©╫г╟О©╫О©╫д©у╦О©╫
     void Trim(std::string& srcBuf);
 
 private:
