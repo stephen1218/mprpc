@@ -4,15 +4,15 @@
 #include <iostream>
 #include <unordered_map>
 
-// ��ܶ�ȡ�����ļ���
+// 锟斤拷芏锟饺★拷锟斤拷锟斤拷募锟斤拷锟�
 class MprpcConfig
 {
 public:
-    // ����������������ļ�
+    // 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷募锟�
     void LoadConfigFile(const char* config_file);
-    // ��ѯ��������Ϣ
+    // 锟斤拷询锟斤拷锟斤拷锟斤拷锟斤拷息
     std::string Load(const std::string& key);
-    // ȥ���ַ���ǰ��Ŀո�
+    // 去锟斤拷锟街凤拷锟斤拷前锟斤拷目崭锟�
     void Trim(std::string& srcBuf);
 
 private:

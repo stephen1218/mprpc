@@ -14,4 +14,4 @@
             void CallMethod(const MethodDescriptor* method,
                           RpcController* controller, const Message* request,
                           Message* response, Closure* done);
-   }
+   };

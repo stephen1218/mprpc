@@ -1,7 +1,7 @@
 #include "mprpcconfig.h"
 #include <fstream>
 
-// ¸ºÔğ½âÎö¼ÓÔØÅäÖÃÎÄ¼ş
+// è´Ÿè´£è§£æåŠ è½½é…ç½®æ–‡ä»¶
 void MprpcConfig::LoadConfigFile(const char* config_file) {
     std::ifstream inputFile(config_file, std::ios_base::out);
     if(!inputFile.is_open()) {
@@ -9,13 +9,13 @@ void MprpcConfig::LoadConfigFile(const char* config_file) {
     }
     std::string line;
     while(std::getline(inputFile,line)) {
-        //È¥µôÇ°ºó¿Õ¸ñ
+        //å»æ‰å‰åç©ºæ ¼
         Trim(line);
         if(line.empty() || line[0] == '#') {
             continue;
         }
 
-        //½âÎöÅäÖÃÏî
+        //è§£æé…ç½®é¡¹
         size_t idx = line.find("=");
         if(idx = std::string::npos) {
             continue;
@@ -29,16 +29,16 @@ void MprpcConfig::LoadConfigFile(const char* config_file) {
     }
 
 }
-// ²éÑ¯ÅäÖÃÏîĞÅÏ¢
+// æŸ¥è¯¢é…ç½®é¡¹ä¿¡æ¯
 std::string  MprpcConfig::Load(const std::string& key){
     auto it = _configMap.find(key);
     if(it == _configMap.end()) {
-        std::cout<<"Ã»ÕÒµ½ÅäÖÃÏî"<<std::endl;
+        std::cout<<"æ²¡æ‰¾åˆ°é…ç½®é¡¹"<<std::endl;
         return "";
     }
     return it->second;
 }
-// È¥µô×Ö·û´®Ç°ºóµÄ¿Õ¸ñ
+// å»æ‰å­—ç¬¦ä¸²å‰åçš„ç©ºæ ¼
 void  MprpcConfig::Trim(std::string& srcBuf){
     int r = srcBuf.size() - 1;
     while(r>=0 && srcBuf[r]=='0') {
